@@ -10,23 +10,35 @@
       </div>
       <ul class="block">
         <li>
-          <Input v-model="number" placeholder="请输入供应商编号" clearable style="width: 200px" />
+          <Input
+            v-model="number"
+            placeholder="请输入供应商编号"
+            clearable
+            style="width: 200px"
+          />
         </li>
         <li class="center">
-          <Input v-model="name" placeholder="请输入供应商名称" clearable style="width: 200px" />
+          <Input
+            v-model="name"
+            placeholder="请输入供应商名称"
+            clearable
+            style="width: 200px"
+          />
         </li>
       </ul>
       <ul class="look">
         <li class="look_1">
-          <button :class="butto?'ma' :'m'" @click="up">查询</button>
+          <button :class="butto ? 'ma' : 'm'" @click="up">查询</button>
         </li>
         <li class="look_2">
-          <button type="rest" :class="butt?'ma' :'m'" @click="empty">重置</button>
+          <button type="rest" :class="butt ? 'ma' : 'm'" @click="empty">
+            重置
+          </button>
         </li>
       </ul>
     </div>
     <div class="export">
-      <button @click="exp" :class="get ?'out':'go'">导出</button>
+      <button @click="exp" :class="get ? 'out' : 'go'">导出</button>
     </div>
     <div class="main_1">
       <!-- table表格 -->
@@ -42,13 +54,13 @@
         <div class="xgpz">
           <span>相关凭证：</span>
           <label for class="xgpz_k">
-            <Upload 
-            multiple='ture' 
-            :on-success="handleSuccess"
-            :format="['jpg','jpeg','png']"
-            :max-size="2048"
-            action="/api/zhgyl-gysfk-setting/greyList/addGreyList"
-            
+            <Upload
+              multiple
+              :on-success="handleSuccess"
+              :format="['jpg', 'jpeg', 'png']"
+              :max-size="2048"
+              :before-upload="handleBeforeUpload"
+              action="/api/zhgyl-gysfk-setting/greyList/addGreyList"
             >
               <button class="xgpz_liu">浏览</button>
             </Upload>
@@ -60,7 +72,9 @@
           </label>
         </div>
         <div class="uoload">
-          <span>(请上传jpg/png/txt/doc/pcf文件，图片大小不小于500kb，文件大于5mb)</span>
+          <span
+            >(请上传jpg/png/txt/doc/pcf文件，图片大小不小于500kb，文件大于5mb)</span
+          >
         </div>
       </Modal>
       <!-- <Modal
@@ -73,7 +87,7 @@
                    <i-input size="large" placeholder="large size" style="width: 629.8px"></i-input>
                     <div class="center">
                         <span class="xgpz">相关凭证：</span>
-                        
+
                     </div>
 
       </Modal>-->
@@ -91,7 +105,7 @@
       <!-- <div class="page">
               <span>共有2222条记录</span>
               <Page :total="2222" show-elevator  prev-text="上一页"  next-text="下一页"></Page>
-             
+
       </div>-->
     </div>
   </div>
@@ -178,10 +192,10 @@ export default {
                       outline: "none",
                       marginRight: "10px"
                     },
-                    //添加击事件
+                    // 添加击事件
                     on: {
                       click: () => {
-                        //点击触发事件
+                        // 点击触发事件
                         this.open = true;
                         console.log(this.open);
                       }
@@ -198,10 +212,10 @@ export default {
                       background: "none",
                       outline: "none"
                     },
-                    //添加击事件
+                    // 添加击事件
                     on: {
                       click: () => {
-                        //点击触发事件
+                        // 点击触发事件
                         this.off == false;
                         console.log(this.off);
                       }
@@ -232,6 +246,18 @@ export default {
     }
   },
   methods: {
+    getObjectURL(file) {
+      var url = null;
+      if (window.createObjcectURL != undefined) {
+        url = window.createOjcectURL(file);
+      } else if (window.URL != undefined) {
+        url = window.URL.createObjectURL(file);
+      } else if (window.webkitURL != undefined) {
+        url = window.webkitURL.createObjectURL(file);
+      }
+      console.log(url, 112121);
+      return url;
+    },
     handleView(name) {
       console.log(name);
       this.imgName = name;
@@ -244,7 +270,8 @@ export default {
       this.$refs.upload.fileList.splice(fileList.indexOf(file), 1);
     },
     handleSuccess(res, file) {
-      console.log(res, file);
+      //
+      console.log(res, file, 111112222);
       // 因为上传过程为实例，这里模拟添加 url
       // file.url =
       //   "https://o5wwk8baw.qnssl.com/7eb99afb9d5f317c912f08b5212fd69a/avatar";
@@ -269,7 +296,9 @@ export default {
         desc: "文件 " + file.name + " 太大，不能超过 2M。"
       });
     },
-    handleBeforeUpload() {
+    handleBeforeUpload(env) {
+      console.log(env, 11111111111);
+      this.getObjectURL(env);
       const check = this.uploadList.length < 5;
       if (!check) {
         this.$Notice.warning({
@@ -286,7 +315,7 @@ export default {
     //         content: `姓名：${this.data6[index].name}<br>年龄：${this.data6[index].age}<br>地址：${this.data6[index].address}`
     //     })
     // },
-    //重置
+    // 重置
     empty() {
       this.butt = true;
       if (this.butt) {
@@ -304,13 +333,13 @@ export default {
     handleSelectAll(status) {
       this.$refs.selection.selectAll(status);
     },
-    //查看
+    // 查看
     up() {
       this.butto = true;
       if (this.butto) {
         this.butt = false;
       }
-      //接口请求
+      // 接口请求
       axios
         .post("/api/zhgyl-gysfk-setting/greyList/queryGreyList", {
           supplierCode: this.number,
@@ -327,7 +356,7 @@ export default {
       console.log(this.number);
       console.log(this.name);
     },
-    //导出
+    // 导出
     exp() {
       let Export = this.tableItem.data.map((item, index) => {
         return item;
