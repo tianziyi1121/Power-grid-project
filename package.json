@@ -70,7 +70,7 @@
     "lint-staged": "^6.0.0",
     "vue-fusioncharts": "^3.0.2",
     "vue-template-compiler": "^2.5.13",
-    "webpack-dev-server": "^2.7.1"
+    "webpack-dev-server": "^3.1.11"
   },
   "browserslist": [
     "> 1%",
