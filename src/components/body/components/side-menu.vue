@@ -8,72 +8,77 @@
       :width="widthNums"
       @on-select="handleSelect($event)"
     >
-    <!-- 供应商管理 -->
+      <!-- 供应商管理 -->
       <Submenu name="digital_logisticst/szwl_supplier">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/htgl.png">
+          <img src="../../../assets/images/side_icon/szwl/htgl.png" />
           <span class="menuUnderline">供应商管理</span>
         </template>
-        <Submenu name="digital_logisticst/szwl_supplier/sup">
-        <template slot="title">
-          <span class="menuUnderline">供应商管理</span>
-        </template>
-        <Submenu name="digital_logisticst/szwl_supplier/sup/bui">
-          <template slot="title">
-            <span class="menuUnderline">基本信息详情页</span>
-          </template>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/bui/stock">
-            <span class="itemSpan">股权穿透图</span>
-          </MenuItem>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/bui/full">
-            <span class="itemSpan">实际控制人</span>
-          </MenuItem>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/bui/concern">
-            <span class="itemSpan">企业关系关联图谱</span>
-          </MenuItem>
-        </Submenu>
-        <MenuItem name="digital_logisticst/szwl_supplier/sup/apt">
-          <span class="itemSpan">资质信息详情页</span>
+        <MenuItem name="digital_logisticst/szwl_supplier/sup/bui/stock">
+          <span class="itemSpan">供应商管理</span>
         </MenuItem>
+        <!-- <Submenu name="digital_logisticst/szwl_supplier/sup"> -->
+        <!-- <template slot="title">
+            <span class="menuUnderline">供应商管理</span>
+          </template> -->
+        <!-- <Submenu name="digital_logisticst/szwl_supplier/sup/bui">
+            <template slot="title">
+              <span class="menuUnderline">基本信息详情页</span>
+            </template>
+            <MenuItem name="digital_logisticst/szwl_supplier/sup/bui/stock">
+              <span class="itemSpan">股权穿透图</span>
+            </MenuItem>
+            <MenuItem name="digital_logisticst/szwl_supplier/sup/bui/full">
+              <span class="itemSpan">实际控制人</span>
+            </MenuItem>
+            <MenuItem name="digital_logisticst/szwl_supplier/sup/bui/concern">
+              <span class="itemSpan">企业关系关联图谱</span>
+            </MenuItem>
+          </Submenu>
+          <MenuItem name="digital_logisticst/szwl_supplier/sup/apt">
+            <span class="itemSpan">资质信息详情页</span>
+          </MenuItem> -->
         <!-- 社会信用管理 -->
-        <Submenu name="digital_logisticst/szwl_supplier/sup/society">
-          <template slot="title">
-            <span class="menuUnderline">社会信用信息</span>
-          </template>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/society/judicial">
-            <span class="itemSpan">司法风险</span>
-          </MenuItem>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/society/run">
-            <span class="itemSpan">经营风险</span>
-          </MenuItem>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/society/risk">
-            <span class="itemSpan">股权风险</span>
-          </MenuItem>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/society/move">
-            <span class="itemSpan">动产抵押</span>
-          </MenuItem>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/society/fine">
-            <span class="itemSpan">行政处罚</span>
-          </MenuItem>
-          <MenuItem name="digital_logisticst/szwl_supplier/sup/society/badly">
-            <span class="itemSpan">严重违法失信</span>
-          </MenuItem>
-        </Submenu>
-        <MenuItem name="digital_logisticst/szwl_supplier/sup/bad">
-          <span class="itemSpan">供应商内部不良信息</span>
-        </MenuItem>
-        </Submenu>
-      </Submenu>  
+        <!-- <Submenu name="digital_logisticst/szwl_supplier/sup/society">
+            <template slot="title">
+              <span class="menuUnderline">社会信用信息</span>
+            </template>
+            <MenuItem
+              name="digital_logisticst/szwl_supplier/sup/society/judicial"
+            >
+              <span class="itemSpan">司法风险</span>
+            </MenuItem>
+            <MenuItem name="digital_logisticst/szwl_supplier/sup/society/run">
+              <span class="itemSpan">经营风险</span>
+            </MenuItem>
+            <MenuItem name="digital_logisticst/szwl_supplier/sup/society/risk">
+              <span class="itemSpan">股权风险</span>
+            </MenuItem>
+            <MenuItem name="digital_logisticst/szwl_supplier/sup/society/move">
+              <span class="itemSpan">动产抵押</span>
+            </MenuItem>
+            <MenuItem name="digital_logisticst/szwl_supplier/sup/society/fine">
+              <span class="itemSpan">行政处罚</span>
+            </MenuItem>
+            <MenuItem name="digital_logisticst/szwl_supplier/sup/society/badly">
+              <span class="itemSpan">严重违法失信</span>
+            </MenuItem>
+          </Submenu>
+          <MenuItem name="digital_logisticst/szwl_supplier/sup/bad">
+            <span class="itemSpan">供应商内部不良信息</span>
+          </MenuItem> -->
+        <!-- </Submenu> -->
+      </Submenu>
       <!-- 风险预警管理 -->
       <Submenu name="digital_logisticst/szwl_venture">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/jsgl.png">
+          <img src="../../../assets/images/side_icon/szwl/jsgl.png" />
           <span class="menuUnderline">风险预警管理</span>
         </template>
-          <MenuItem name="digital_logisticst/szwl_venture/bd">
-            <span class="itemSpan">不良行为预警</span>
-          </MenuItem>
-        
+        <MenuItem name="digital_logisticst/szwl_venture/bd">
+          <span class="itemSpan">不良行为预警</span>
+        </MenuItem>
+
         <Submenu name="digital_logisticst/szwl_settlement/fpgl">
           <template slot="title">
             <span class="menuUnderline">发票管理</span>
@@ -93,7 +98,9 @@
             <span class="itemSpan">重点工程结算管理</span>
           </MenuItem>
           <MenuItem name="digital_logisticst/szwl_settlement/fkgl/zb">
-            <span class="itemSpan">到货款、投运款、质保款预警、僵尸合同指标</span>
+            <span class="itemSpan"
+              >到货款、投运款、质保款预警、僵尸合同指标</span
+            >
           </MenuItem>
           <MenuItem name="digital_logisticst/szwl_settlement/fkgl/zjsy">
             <span class="itemSpan">资金使用情况综合分析</span>
@@ -109,7 +116,7 @@
       <!-- 协议库存管理 -->
       <Submenu name="digital_logisticst/szwl_xykcgl">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/xykcgl.png">
+          <img src="../../../assets/images/side_icon/szwl/xykcgl.png" />
           <span class="menuUnderline">协议库存管理</span>
         </template>
         <Submenu name="digital_logisticst/szwl_xykcgl/xypp">
@@ -141,10 +148,10 @@
       <!-- 履约管理 -->
       <Submenu name="digital_logisticst/szwl_wzlvql">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/ccgl.png">
+          <img src="../../../assets/images/side_icon/szwl/ccgl.png" />
           <span class="menuUnderline">履约管理</span>
         </template>
-         <MenuItem name="digital_logisticst/szwl_wzlvql/qxt">
+        <MenuItem name="digital_logisticst/szwl_wzlvql/qxt">
           <span class="itemSpan">重点工程物资保障全息图</span>
         </MenuItem>
 
@@ -164,59 +171,58 @@
         </Submenu>
 
         <Submenu name="digital_logisticst/szwl_wzlvql/lyhj">
-            <template slot="title">
+          <template slot="title">
             <span class="menuUnderline">履约环节</span>
-            </template>
-            <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/gyjh">
+          </template>
+          <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/gyjh">
             <span class="itemSpan">供应计划</span>
-            </MenuItem>
-            <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/tzjf">
+          </MenuItem>
+          <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/tzjf">
             <span class="itemSpan">图纸交付</span>
-            </MenuItem>
-            <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/scbl">
+          </MenuItem>
+          <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/scbl">
             <span class="itemSpan">生产备料</span>
-            </MenuItem>
-            <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/pcjh">
+          </MenuItem>
+          <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/pcjh">
             <span class="itemSpan">排产计划</span>
-            </MenuItem>
-            <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/sczx">
+          </MenuItem>
+          <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/sczx">
             <span class="itemSpan">生产执行</span>
-            </MenuItem>
-            <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/fhtz">
+          </MenuItem>
+          <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/fhtz">
             <span class="itemSpan">发货通知</span>
-            </MenuItem>
-            <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/dhys">
+          </MenuItem>
+          <MenuItem name="digital_logisticst/szwl_wzlvql/lyhj/dhys">
             <span class="itemSpan">到货验收</span>
-            </MenuItem>
-
+          </MenuItem>
         </Submenu>
 
-         <Submenu name="digital_logisticst/szwl_xykcgl/zggclyywfx">
-            <template slot="title">
+        <Submenu name="digital_logisticst/szwl_xykcgl/zggclyywfx">
+          <template slot="title">
             <span class="menuUnderline">直管工程履约业务分析</span>
-            </template>
-            <MenuItem name="">
+          </template>
+          <MenuItem name="">
             <span class="itemSpan">物资供应保障任务</span>
-            </MenuItem>
-            <MenuItem name="">
+          </MenuItem>
+          <MenuItem name="">
             <span class="itemSpan">物资供应保障计划</span>
-            </MenuItem>
-            <MenuItem name="">
+          </MenuItem>
+          <MenuItem name="">
             <span class="itemSpan">物资供应保障分析</span>
-            </MenuItem>
+          </MenuItem>
         </Submenu>
 
         <MenuItem name="digital_logisticst/szwl_xykcgl/fzggclyywfx">
-            <span class="menuUnderline">非直管工程履约业务分析</span>
+          <span class="menuUnderline">非直管工程履约业务分析</span>
         </MenuItem>
         <MenuItem name="digital_logisticst/szwl_xykcgl/lywt">
-            <span class="menuUnderline">履约问题</span>
+          <span class="menuUnderline">履约问题</span>
         </MenuItem>
       </Submenu>
       <!-- 仓储管理 -->
       <Submenu name="digital_logisticst/szwl_ccgl">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/ccgl.png">
+          <img src="../../../assets/images/side_icon/szwl/ccgl.png" />
           <span class="menuUnderline">仓储管理</span>
         </template>
         <MenuItem name="digital_logisticst/szwl_ccgl/jbxx">
@@ -234,13 +240,13 @@
       </Submenu>
       <Submenu name="">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/psgl.png">
+          <img src="../../../assets/images/side_icon/szwl/psgl.png" />
           <span class="menuUnderline">配送管理</span>
         </template>
       </Submenu>
       <Submenu name="digital_logisticst/szwl_fjczgl">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/fjczgl.png">
+          <img src="../../../assets/images/side_icon/szwl/fjczgl.png" />
           <span class="menuUnderline">废旧处置管理</span>
         </template>
         <Submenu name="digital_logisticst/szwl_fjczgl/bfgl">
@@ -277,7 +283,7 @@
       </Submenu>
       <Submenu name="digital_logisticst/szwl_yjbz">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/yjbz.png">
+          <img src="../../../assets/images/side_icon/szwl/yjbz.png" />
           <span class="menuUnderline">应急保障</span>
         </template>
         <MenuItem name="digital_logisticst/szwl_yjbz/yjqxt">
@@ -361,7 +367,7 @@
       <!-- 灰名单管理 -->
       <Submenu name="digital_logisticst/szwl_gray">
         <template slot="title">
-          <img src="../../../assets/images/side_icon/szwl/ccgl.png">
+          <img src="../../../assets/images/side_icon/szwl/ccgl.png" />
           <span class="menuUnderline">灰名单管理</span>
         </template>
         <MenuItem name="digital_logisticst/szwl_gray/manage">
@@ -377,7 +383,7 @@
           <img src="../../../assets/images/side_icon/szwl/htgl.png">
           <span class="menuUnderline">供应商管理</span>
         </template>
-        
+
       </Submenu> -->
     </Menu>
   </div>
@@ -385,53 +391,60 @@
 <script>
 // import { mapGetters } from 'vuex'
 export default {
-  name: 'SideMenu',
+  name: "SideMenu",
   components: {},
   props: {
     menuList: {
       type: Array,
-      default () {
-        return []
+      default() {
+        return [];
       }
     },
     collapsed: {
       type: Boolean
     }
   },
-  data () {
+  data() {
     return {
-      widthNums: '270px',
-      activeName: '',
+      widthNums: "270px",
+      activeName: "",
       nameMap: {
-        home: 'home', // 首页
-        digital_logisticst: 'digital_logisticst/transition/page', // 数字物流
-        smart_sourcing: 'smart_sourcing/transition/page', // 智能采购
-        panoramic_control: 'panoramic_control/transition/page', // 全景质控
-        supply_chain: 'supply_chain/transition/page', // 供应链协同
-        operation_supervision: 'operation_supervision/transition/page', // 运营监督
-        auxiliary_function: 'auxiliary_function/transition/page' // 辅助功能
+        home: "home", // 首页
+        digital_logisticst: "digital_logisticst/transition/page", // 数字物流
+        smart_sourcing: "smart_sourcing/transition/page", // 智能采购
+        panoramic_control: "panoramic_control/transition/page", // 全景质控
+        supply_chain: "supply_chain/transition/page", // 供应链协同
+        operation_supervision: "operation_supervision/transition/page", // 运营监督
+        auxiliary_function: "auxiliary_function/transition/page" // 辅助功能
       }
-    }
+    };
   },
-  created: function () {
-    this.activeName = this.$route.path.substr(1).split('/')[0]
+  created: function() {
+    this.activeName = this.$route.path.substr(1).split("/")[0];
   },
   methods: {
-    toResourceOverall (e) {},
-    handleSelect (name) {
+    toResourceOverall(e) {},
+    handleSelect(name) {
       // 多次重复点击一个菜单，加判断
       if (!window.location.href.includes(name)) {
         // 演示用 -- start -- 后期删除
-        let namearr = ['重点工程物资保障全息图', '排产计划', '生产执行', '重点工程结算管理', '供应计划', '重点工程单体情况分析']
+        let namearr = [
+          "重点工程物资保障全息图",
+          "排产计划",
+          "生产执行",
+          "重点工程结算管理",
+          "供应计划",
+          "重点工程单体情况分析"
+        ];
         let patharr = [
-          'digital_logisticst/szwl_wzlvql/qxt',
-          'digital_logisticst/szwl_wzlvql/lyhj/pcjh',
-          'digital_logisticst/szwl_wzlvql/lyhj/sczx',
-          'digital_logisticst/szwl_settlement/fkgl/zdgc',
-          'digital_logisticst/szwl_wzlvql/lyhj/gyjh',
-          'digital_logisticst/szwl_wzlvql/overview_hologram_single'
-        ]
-        let list = []
+          "digital_logisticst/szwl_wzlvql/qxt",
+          "digital_logisticst/szwl_wzlvql/lyhj/pcjh",
+          "digital_logisticst/szwl_wzlvql/lyhj/sczx",
+          "digital_logisticst/szwl_settlement/fkgl/zdgc",
+          "digital_logisticst/szwl_wzlvql/lyhj/gyjh",
+          "digital_logisticst/szwl_wzlvql/overview_hologram_single"
+        ];
+        let list = [];
         for (let i = 0; i < patharr.length; i++) {
           if (patharr[i] === name) {
             list = [
@@ -439,75 +452,75 @@ export default {
                 name: namearr[patharr.indexOf(name)],
                 path: name
               }
-            ]
+            ];
           }
         }
-        this.$store.commit('changeHistoryList', list)
+        this.$store.commit("changeHistoryList", list);
         // 演示用 -- end -- 后期删除
 
-        this.$emit('on-select', name)
+        this.$emit("on-select", name);
       }
     },
-    getPath (route) {
-      this.path = route.path.substr(1)
+    getPath(route) {
+      this.path = route.path.substr(1);
     },
-    getOpenedNames (route) {
-      let p = route.path.split('/')
-      p.shift()
-      p.pop()
-      let openNames = []
+    getOpenedNames(route) {
+      let p = route.path.split("/");
+      p.shift();
+      p.pop();
+      let openNames = [];
       for (let i = 0; i < p.length; i++) {
-        let openNamesStr = ''
+        let openNamesStr = "";
         for (let j = 0; j <= i; j++) {
           if (j == 0) {
-            openNamesStr = p[j]
+            openNamesStr = p[j];
           } else {
-            openNamesStr = openNamesStr + '/' + p[j]
+            openNamesStr = openNamesStr + "/" + p[j];
           }
         }
-        openNames.push(openNamesStr)
+        openNames.push(openNamesStr);
       }
-      this.openedNames = openNames
+      this.openedNames = openNames;
     }
   },
   computed: {
-    path () {
-      return this.$route.path.substr(1)
+    path() {
+      return this.$route.path.substr(1);
     },
-    openedNames () {
+    openedNames() {
       // alert('c'+this.$route.path);
-      let p = this.$route.path.split('/')
-      p.shift()
-      let a = p.pop()
-      let openNames = []
+      let p = this.$route.path.split("/");
+      p.shift();
+      let a = p.pop();
+      let openNames = [];
       for (let i = 0; i < p.length; i++) {
-        let openNamesStr = ''
+        let openNamesStr = "";
         for (let j = 0; j <= i; j++) {
           if (j == 0) {
-            openNamesStr = p[j]
+            openNamesStr = p[j];
           } else {
-            openNamesStr = openNamesStr + '/' + p[j]
+            openNamesStr = openNamesStr + "/" + p[j];
           }
         }
-        openNames.push(openNamesStr)
+        openNames.push(openNamesStr);
       }
-      return openNames
+      return openNames;
     }
   },
   watch: {
-    $route (to, from) {
-      this.activeName = this.$route.path.substr(1).split('/')[0]
+    $route(to, from) {
+      this.activeName = this.$route.path.substr(1).split("/")[0];
       this.$nextTick(() => {
-        this.$refs.side_menu.updateOpened()
-        this.$refs.side_menu.updateActiveName()
-      })
+        this.$refs.side_menu.updateOpened();
+        this.$refs.side_menu.updateActiveName();
+      });
     }
   },
-  mounted () {
+  mounted() {
     this.$nextTick(() => {
-      this.$refs.side_menu.updateOpened()
-      this.$refs.side_menu.updateActiveName()
-    })
+      this.$refs.side_menu.updateOpened();
+      this.$refs.side_menu.updateActiveName();
+    });
   }
-}
+};
 </script>
